@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  justify-content: space-around;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  transition: 0.5s;
+  font-size: 20px;
+}
+.menu li a:hover{
+  color: #d42701;
+}
+
+.logo img {
+  width: 60%;
+  cursor: pointer;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  line-height: 0;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  z-index: 2;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+nav button {
+  padding: 10px;
+  border-radius: 30px !important;
+  background: #fec940;
+  font-weight: 500;
+  cursor: pointer;
+  color: #000;
+  transition: 0.5s;
+  border: 2px solid #fec940;
+  width: 150px;
+}
+
+nav button:hover {
+  background-color: #d42701;
+  border: 2px solid #d42701;
+  color: #fff;
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 87vh;
+  overflow: hidden; /* Hide overflow */
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out; /* Smooth transition for background change */
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.second-band {
+  padding: 70px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.second-band .content {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.second-band .content h1 {
+  color: #000;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.second-band .content p {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.background-image img {
+  width: 100%;
+  height: 280px;
+  border-radius: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.second-band-box {
+  margin-bottom: 30px;
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.second-box-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  z-index: 1;
+  background-color: #f7f2e7;
+  color: #000;
+  padding: 10px;
+  border-radius: 30px;
+  padding-bottom: 0;
+  transition: 0.5s;
+  transform: translate(-50%, -50%); /* Ensure content is centered */
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  color: #fff;
+  padding: 54px;
+  opacity: 0; /* Start with hidden */
+  visibility: hidden; /* Ensure it's not interactable */
+  transition: opacity 0.5s ease, visibility 0s 0.5s; /* Smooth opacity change and delay visibility */
+  z-index: 2; /* Ensure overlay content appears above the overlay */
+  transform: translate(-50%, -50%); /* Ensure content is centered */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  z-index: 1; /* Ensure the overlay stays above the image */
+  opacity: 1; /* Start with no visibility */
+  transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+.second-band-box:hover .second-box-content {
+  display: none;
+}
+
+.second-band-box:hover .overlay-content {
+  opacity: 1; /* Fade in the overlay content */
+  visibility: visible; /* Make the content visible */
+  transition: opacity 0.5s ease, visibility 0s 0s; /* Ensure visibility is immediately available after the fade */
+}
+.second-band-box button {
+  padding: 10px;
+  border-radius: 30px !important;
+  background: #fec940;
+  font-weight: 500;
+  cursor: pointer;
+  color: #000;
+  transition: 0.5s;
+  border: 2px solid #fec940;
+  width: 150px;
+  transition: 0.5s;
+}
+.second-band-box button .icon{
+  transition: 0.5s;
+  margin-left: 5px;
+}
+.second-band-box button:hover .icon{
+  transform: translateX(5px);
+}
+.second-band-box button:hover{
+  box-shadow: 0px 10px 8px #00000085;
+}
+.overlay-content p {
+  font-size: 17px;
+  font-weight: 400;
+}
+.overlay-content h5 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.second-band .second-band-box:hover img {
+  transform: translate(5px, 5px) scale(1.1); 
+  transition: transform 0.5s ease-in-out;
+  border-radius: 30px;
+}
+
+.third-band{
+  padding: 70px 50px;
+  background-color: #f9f7fb;
+}
+
+.footer {
+  background-color: #151515;
+  padding: 40px;
+  color: #fff;
+}
+.footer .icons {
+  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+.footer h6{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.footer ul {
+  list-style: none;
+  padding-left: 5px;
+}
+.footer ul li a {
+  text-decoration: none;
+  color: #a7a7a7;
+  transition: 0.5s;
+  position: relative;
+  font-size: 17px;
+  font-weight: 400;
+}
+/* .footer ul li:hover{
+  transform: translateX(10px);
+} */
+.footer ul li{
+  transition: 0.5s;
+  cursor: pointer;
+  color: #a7a7a7;
+}
+
+.footer ul li a:hover{
+  color: #d42701;
+}
+.lastpart{
+  background-color: #000;
+  padding: 10px;
+}
+.lastpart h6{
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+  }
+
+  .menu.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu li {
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .right-parrt {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+}
+
+
+
+/* For devices with a max-width of 1200px (Tablet-sized screens) */
+@media (max-width: 1200px) {
+  .carousel-container {
+    height: 400px; /* Reduce height for tablets */
+  }
+
+  .carousel-control {
+    font-size: 24px; /* Smaller control buttons */
+    padding: 8px; /* Adjust button size */
+  }
+}
+
+/* For devices with a max-width of 768px (Mobile-sized screens) */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 300px; /* Reduce height for mobile screens */
+  }
+
+  .carousel-control {
+    font-size: 20px; /* Smaller control buttons */
+    padding: 6px; /* Adjust button size */
+  }
+}
+
+/* For devices with a max-width of 480px (Very small mobile screens) */
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 250px; /* Further reduce height for smaller screens */
+  }
+
+  .carousel-control {
+    font-size: 18px; /* Even smaller control buttons */
+    padding: 5px; /* Adjust button size */
+  }
+}
