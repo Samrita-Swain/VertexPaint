@@ -1,6 +1,6 @@
 import { BrowserRouter as Router} from 'react-router-dom';
 import './App.css';
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from './Components/ScrollToTop';
 import Header from './Components/Header';
 import RoutesComponent from './Components/RoutesComponent';
 import Footer from './Components/Footer';
