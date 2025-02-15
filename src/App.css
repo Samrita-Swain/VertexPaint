@@ -232,6 +232,7 @@ nav button:hover {
   border: 2px solid #fec940;
   width: 150px;
   transition: 0.5s;
+  font-size: 15px;
 }
 .second-band-box button .icon{
   transition: 0.5s;
